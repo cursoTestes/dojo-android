@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Vendas</string>
+    <string name="action_settings">Settings</string>
+    
+        
+    <string name="totalVendas">Total de vendas:</string>
+    <string name="digiteTotalVendido">Digite o total vendido.</string>
+    <string name="calcularComissao">Calcular Comissão</string>
+    <string name="totalComissao">Total de comissão</string>
+    <string name="nao_calculada">Não calculada</string>
+    
+    <string name="configurar">Configurar</string>
+
+</resources>
