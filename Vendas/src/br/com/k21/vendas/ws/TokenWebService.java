@@ -6,5 +6,5 @@ import retrofit.http.Path;
 public interface TokenWebService {
 
 	@POST("/login/{login}/{password}")
-	public void login(@Path("login") String login, @Path("password") String password);
+	public String login(@Path("login") String login, @Path("password") String password);
 }
