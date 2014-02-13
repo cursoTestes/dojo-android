@@ -36,7 +36,7 @@ public class MainActivityUnitTest extends ActivityUnitTestCase<MainActivity> {
 		calcularBtn.performClick();
 		
 		TextView comissaoCalculadaLbl = (TextView) activity.findViewById(R.id.lbl_comissaoCalculada);
-		assertEquals("5.00", comissaoCalculadaLbl.getText());
+		assertEquals("5,00", comissaoCalculadaLbl.getText());
 	}
 	
 	public void testClicarEmConfigurarDeveAbrirConfiguracao() {
