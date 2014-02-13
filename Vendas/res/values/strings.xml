@@ -12,5 +12,7 @@
     <string name="nao_calculada">Não calculada</string>
     
     <string name="configurar">Configurar</string>
+    
+    <string name="calcularRoyalties">Calcular Royalties</string>
 
 </resources>
