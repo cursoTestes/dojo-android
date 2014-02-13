@@ -1,16 +1,12 @@
 package br.com.k21.vendas;
 
+import br.com.k21.vendas.framework.SharedResourceActivityUnitTest;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.test.ActivityUnitTestCase;
 
-public class StartActivityUnitTest extends ActivityUnitTestCase<StartActivity> {
+public class StartActivityUnitTest extends SharedResourceActivityUnitTest<StartActivity> {
 	
-	private SharedPreferences prefs;
-
 	public StartActivityUnitTest() {
 		super(StartActivity.class);
 	}
@@ -19,11 +15,7 @@ public class StartActivityUnitTest extends ActivityUnitTestCase<StartActivity> {
 	protected void setUp() throws Exception {
 		super.setUp();
 		
-		prefs = getInstrumentation().getTargetContext().getSharedPreferences("prefs", Context.MODE_PRIVATE);
-		
-		Editor editor = prefs.edit();
-		editor.clear();
-		editor.commit();
+		limparSharedPreference();
 	}
 
 	private Activity iniciarActivity() {

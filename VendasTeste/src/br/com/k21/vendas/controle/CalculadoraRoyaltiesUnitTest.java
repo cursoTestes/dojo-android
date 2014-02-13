@@ -6,17 +6,19 @@ import static org.mockito.Mockito.when;
 import java.util.ArrayList;
 import java.util.List;
 
-import junit.framework.TestCase;
+import br.com.k21.vendas.framework.BaseTestCase;
 import br.com.k21.vendas.ws.VendasWebService;
 
 // TODO nao está correto, somente exemplo
-public class CalculadoraRoyaltiesUnitTest extends TestCase {
+public class CalculadoraRoyaltiesUnitTest extends BaseTestCase {
 
 	private VendasWebService vendasWS;
 	private CalculadoraComissao calculadoraComissao;
 
 	@Override
 	protected void setUp() throws Exception {
+		super.setUp();
+		
 		vendasWS = mock(VendasWebService.class);
 		calculadoraComissao = mock(CalculadoraComissao.class);
 	}
@@ -26,7 +28,7 @@ public class CalculadoraRoyaltiesUnitTest extends TestCase {
 		int ano = 2014;
 		double esperado = 0;
 		
-		double resultado = new CalculadoraRoyalties(vendasWS, calculadoraComissao).calcularRoyalties(mes,ano);
+		double resultado = new CalculadoraRoyalties(vendasWS, calculadoraComissao).calcularRoyalties(ano, mes);
 		
 		assertEquals(esperado, resultado);
 	}
@@ -38,9 +40,9 @@ public class CalculadoraRoyaltiesUnitTest extends TestCase {
 
 		List<Double> vendas = new ArrayList<Double>();
 		vendas.add(100d);
-		when(vendasWS.obterVendasPorMesEAno(mes, ano)).thenReturn(vendas);
+		when(vendasWS.obterVendasPorMesEAno(ano, mes)).thenReturn(vendas);
 		
-		double resultado = new CalculadoraRoyalties(vendasWS, calculadoraComissao).calcularRoyalties(mes,ano);
+		double resultado = new CalculadoraRoyalties(vendasWS, calculadoraComissao).calcularRoyalties(ano, mes);
 		
 		assertEquals(esperado, resultado);
 	}

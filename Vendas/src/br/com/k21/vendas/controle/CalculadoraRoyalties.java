@@ -14,7 +14,7 @@ public class CalculadoraRoyalties {
 		this.calculadoraComissao = calculadoraComissao;
 	}
 
-	public double calcularRoyalties(int mes, int ano) {
+	public double calcularRoyalties(int ano, int mes) {
 		List<Double> vendas = vendasWS.obterVendasPorMesEAno(ano, mes);
 		double faturamento = 0d;
 		
