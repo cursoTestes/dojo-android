@@ -1,9 +1,10 @@
 package br.com.k21.vendas;
 
-import br.com.k21.vendas.framework.SharedResourceActivityUnitTest;
+import static br.com.k21.vendas.framework.SharedPreferenceUtils.limparSharedPreference;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences.Editor;
+import br.com.k21.vendas.framework.SharedResourceActivityUnitTest;
 
 public class StartActivityUnitTest extends SharedResourceActivityUnitTest<StartActivity> {
 	
@@ -15,7 +16,7 @@ public class StartActivityUnitTest extends SharedResourceActivityUnitTest<StartA
 	protected void setUp() throws Exception {
 		super.setUp();
 		
-		limparSharedPreference();
+		limparSharedPreference(prefs);
 	}
 
 	private Activity iniciarActivity() {
