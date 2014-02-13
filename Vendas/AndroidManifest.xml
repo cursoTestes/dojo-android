@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="10"
+        android:minSdkVersion="11"
         android:targetSdkVersion="15" />
 
     <application
@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name=".StartActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,11 @@
             </intent-filter>
         </activity>
         
-        <activity android:name=".ConfigActivity" android:label="@string/app_name" />
+        <activity android:name=".MainActivity" android:label="@string/app_name" />
+        <activity android:name=".ConfigActivity" android:label="Configuracoes" />
+        <activity android:name=".VendasActivity" android:label="Vendas" />
+        <activity android:name=".LoginActivity" android:label="Login" />
+        
     </application>
 
 </manifest>
