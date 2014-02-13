@@ -46,9 +46,5 @@ public class MainActivityUnitTest extends ActivityUnitTestCase<MainActivity> {
 		Intent intent = getStartedActivityIntent();
 		assertEquals(".ConfigActivity", intent.getComponent().getShortClassName());
 	}
-	
-	public void testFoo() {
-		assertFalse(true);
-	}
 
 }
